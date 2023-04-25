@@ -1,0 +1,134 @@
+
+@media (max-width: 768px) {
+
+#about{
+display: flex;
+flex-direction: row;
+height: fit-content;
+}
+#about .meh{
+justify-self: center;
+margin-top: 13vh;
+color: #537537;
+}
+
+#about .meh h1{
+font-family: 'Agenor Neue', sans-serif;                                
+font-size: 2rem;
+line-height: 0;
+text-align: center;
+}
+.abouts .About-Card{
+display: flex;
+text-align: justify;
+width: 85vw;
+height: fit-content; 
+justify-content:space-evenly;
+}
+
+#about p {
+font-family: 'Utendo', sans-serif;                            
+font-size: 1.5rem;
+margin-bottom: 1.5rem;
+color: #537537;
+}
+.skillset{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 5vw;
+
+}
+.skillset div{
+    border-radius: 20px;
+    flex: 1;
+    transition: .3s all ease;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.skillset img{
+    width: 20vw;
+    height: 20vw;
+}
+.skillset div:hover{
+    flex: 2;
+    background-color: #BFCCB5;
+}
+/* Contact Section */
+#contact {
+    height: 100vh;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex-direction: column;
+}
+#contact .contactContainer{
+    display: flex;
+    width: 80vw;
+
+}
+
+/* Contact Section */
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+}
+#contact .contactContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80vw;
+    height: fit-content;
+    background-color: #B3C99C;
+    border-radius: 20px;
+    padding: 20px;
+    outline: 2.5px solid #41644A;
+}
+
+#contact .insContact{
+    width: 80%
+}
+
+#contact form {
+    display: flex ;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 2vw;
+}
+
+.footerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+}
+
+.socials{
+    display: flex;
+    width: fit-content;
+
+}
+
+.socials ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.socials img{
+    height: 10vw;
+    width: 10vw;
+    margin: 5px;
+}
+
+}
+
+
+
