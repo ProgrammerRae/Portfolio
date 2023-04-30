@@ -18,22 +18,23 @@ ul {
 /* Header */
 .headercontainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    background-color: #A4BC92;
     border: #6d6d6d;
     position: fixed;
     height: 9vh;
     width: 100%;
     z-index: 999;
 }
-
+.sectionContainer{
+    scroll-snap-type: y mandatory; 
+    scroll-snap-align: start; 
+}
 nav {
     position: absolute;
     padding: 1rem;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
     z-index: 99;
 }
 nav ul{
@@ -56,6 +57,15 @@ nav a {
 nav a:hover {
     color: #41644A;
     transform: translateY(-7px);
+}
+.logo{
+    width: 3vw;
+    height: 3vw;
+}
+.burgerBtn{
+    margin-left: 90vw;
+    width: 2vw;
+    height: 2vw;
 }
 .socials{
     background-color: none;
@@ -153,37 +163,36 @@ section{
 /*ABOUT*/
 #about{
     height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
+    margin: none;
     z-index: 99;
-
+    justify-content: center;
 }
 #about .meh{
-    display: flex;
     justify-self: right;
     text-align: center;
+    line-height: -5vh;
     align-self: center;
-    margin-top: 30px;
+    padding: 5vw
 }
 
 #about .meh h1{
-    font-family: 'Agenor Neue', sans-serif;                                
-    font-size: 2rem;
+    font-family: 'Jakarta Brittany', sans-serif;                                
+    font-size: 6rem;
     line-height: 0;
     text-align: center;
     color: #537537;
 }
+
 .containerAbout{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 .abouts{
     position: relative;
 }
 
-.abouts2{
-    position: relative;
-}
 .abouts .About-Card{
     position: relative;
     padding: 10px;
@@ -192,8 +201,11 @@ section{
     text-align: justify;
     width: 70vw;
     height: 21vh; 
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+}
+#about p {
+    font-family: 'Two Weekends Sans', sans-serif;                          
+    font-size: 1.5rem;
+    color: #537537;;
 }
 
 
@@ -226,46 +238,59 @@ section{
     opacity: 0;
     transition: transform 1s ease-out ;
 }
-.toUp.active{
+.toUp.turnUp{
     transform: translateY(0px);
     opacity: 100;
 }
 
-#about p {
-    font-family: 'Utendo', sans-serif;                            
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    color: #537537;;
+/*SKill*/
+
+
+#skill{
+    background-color: #A4BC92;
+    padding-top: 5vw;
 }
-.abouts3{
-    width: 80vw;
-}
+
 .skillset{
     display: flex;
-    margin-top: 5vw;
-
+    gap: 1rem;
 }
 .skillset div{
-    border-radius: 20px;
     flex: 1;
-    transition: .3s all ease;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.skillset img{
-    width: 4vw;
-    height: 4vw;
+    border-radius: 20px;
+    height: 7vw;
+    width: 80vw;
+    background-position: center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    transition: .3s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .skillset div:hover{
     flex: 2;
-    background-color: #BFCCB5;
 }
-
+.ExpContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15vh;
+}
+.skillExplanation{
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+    width: 70vw;
+    height: 21vh;
+    font-size: 3vh;
+    font-family: 'Two Weekends Sans', sans-serif;
+}
 /* Projects Section */
 #portfolio {
     height: 100vh;
-    margin-top: 4rem;
     padding: 2rem;
+    background-color: #C7E8CA;
     }
 /* Contact Section */
 #contact {

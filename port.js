@@ -16,47 +16,67 @@ function hideNavBarOnFirstSection() {
 
     observer.observe(this.firstSec);
 }
+function animateSections() {
+  const options = {
+    rootMargin: '-50% 0px -50% 0px', // adjust root margin as needed
+  };
+  const firstSection = document.querySelector('#home');
+  const secSection = document.querySelector('#about');
 
-//for the cool transition in the about section. Yeah 
-function animateSecondSec() {
-    const options = {
-        rootMargin: '-50% 0px -50% 0px', // adjust root margin as needed
-    };
-    const firstSect = document.querySelector('#home');
-    const boxes = document.querySelectorAll('.toright');
-    const boxes1 = document.querySelectorAll('.toleft');
-    const boxes2 = document.querySelectorAll('.toUp');
-    const collCards = [boxes, boxes1, boxes2]; // Convert collCards to an array
+  const boxes = document.querySelectorAll('.toright');
+  const boxes1 = document.querySelectorAll('.toleft');
+  const boxes3 = document.querySelectorAll('.toUp');
 
-    collCards.forEach((cards) => {
-        cards.forEach((card)=>{
-        const observer2 = new IntersectionObserver((entries2) => {
-            entries2.forEach((entry2) => {
-                if (entry2.target === firstSect) {
-                    if (entry2.isIntersecting) {
-                        card.classList.remove('active');
-                    } else {
-                        card.classList.add('active');
-                    }
-                }
-            });
-        }, options); // Pass options to the IntersectionObserver constructor
+  const collCards = [...boxes, ...boxes1]; // Merge NodeList objects into one array
 
-        observer2.observe(firstSect);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.target === firstSection) {
+        collCards.forEach((card) => {
+          if (entry.isIntersecting) {
+            card.classList.remove('active');
+          } else {
+            card.classList.add('active');
+          }
+        });
+      }
+      if (entry.target === secSection) {
+        boxes3.forEach((box) => {
+          if (entry.isIntersecting) {
+            box.classList.remove('turnUp');
+          } else {
+            box.classList.add('turnUp');
+          }
+        });
+      }
     });
-  })
+  }, options);
+
+  observer.observe(firstSection);
+  observer.observe(secSection);
 }
+
+
 function animateFirstSec(){    
   var floatingObj = document.querySelector('me');
   floatingObj.classList.toggle('floating'); 
 }
+
 window.addEventListener('load', hideNavBarOnFirstSection);
 window.addEventListener('scroll', hideNavBarOnFirstSection);
 window.addEventListener('resize', hideNavBarOnFirstSection);
 
 
-window.addEventListener('load', animateSecondSec);
-window.addEventListener('scroll', animateSecondSec);
-window.addEventListener('resize', animateSecondSec);
+window.addEventListener('load', animateSections);
+window.addEventListener('scroll', animateSections);
+window.addEventListener('resize', animateSections);
 
 
+const scrolltoAbout= document.getElementById('planebtn');
+
+scrolltoAbout.addEventListener('click', ()=>{
+  const targetSection = document.getElementById('about');
+
+  // Scroll to the target section using smooth scrolling behavior
+  targetSection.scrollIntoView({ behavior: 'smooth' });
+});

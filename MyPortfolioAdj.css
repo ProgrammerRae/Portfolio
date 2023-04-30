@@ -2,35 +2,40 @@
 @media (max-width: 768px) {
 
 #about{
-display: flex;
-flex-direction: row;
-height: fit-content;
+    flex-direction: column;
+    height: 100vh;
 }
 #about .meh{
-justify-self: center;
-margin-top: 13vh;
-color: #537537;
+    color: #537537;
 }
 
 #about .meh h1{
-font-family: 'Agenor Neue', sans-serif;                                
-font-size: 2rem;
-line-height: 0;
-text-align: center;
+    font-family: 'Jakarta Brittany', sans-serif;                                
+    font-size: 8vh;
+    line-height: 0;
+    text-align: center;
+    color: #537537;
 }
+
+.containerAbout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .abouts .About-Card{
-display: flex;
-text-align: justify;
-width: 85vw;
-height: fit-content; 
-justify-content:space-evenly;
+    position: relative;
+    display: flex;
+    text-align: justify;
+    width: 70vw;
+    height: 21vh; 
 }
 
 #about p {
-font-family: 'Utendo', sans-serif;                            
-font-size: 1.5rem;
-margin-bottom: 1.5rem;
-color: #537537;
+    font-family: 'Utendo', sans-serif;                            
+    font-size: 2.5vh;
+    color: #537537;
 }
 .skillset{
     display: flex;
