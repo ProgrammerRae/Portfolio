@@ -72,17 +72,12 @@ nav a:hover {
 }
 .socials{
     background-color: none;
-    display: flex;
     width: fit-content;
-    margin-left: 44vw;
 }
 
 .socials ul{
     background-color: none;
     display: flex;
-    width: fit-content;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 .socials img{
@@ -105,6 +100,7 @@ section{
     display: flex;
     background-color: #DDFFBB;
     z-index: 99;
+    outline: 1px solid rgb(2, 54, 8);
 }
 .home1{
     position: relative;
@@ -120,10 +116,10 @@ section{
     font-family: 'Jakarta Brittany', sans-serif;       
     color: #fff;
     line-height: 0;
+    margin-bottom: 2vw;
+    margin-top: 5vw;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     animation: float 3s infinite; 
-    background-image: url("https://cdn-icons-png.flaticon.com/512/3208/3208676.png");
-
 }
 @keyframes float {
 0%,
@@ -139,9 +135,9 @@ section{
     color: #41644A ;
 }
 #home .greet {
-    line-height: 0;
-    font-size: 2rem;
+    font-size: 3vw;
     font-weight: bold;
+    margin-top: 8vw;
     font-family: 'Bebas Neue', sans-serif;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -216,7 +212,7 @@ section{
 .toleft{
     transform: translateX(-550px);
     opacity: 0;
-    transition: transform 1s ease-out ;
+    transition: transform 0.8s ease-out ;
 }
 .toleft.active{
     transform: translateX(0px);
@@ -227,7 +223,7 @@ section{
 .toright{
     transform: translateX(550px);
     opacity: 0;
-    transition: transform 1s ease-out ;
+    transition: transform 0.8s ease-out ;
 }
 .toright.active{
     transform: translateX(0px);
@@ -239,7 +235,7 @@ section{
 .toUp{
     transform: translateY(550px);
     opacity: 0;
-    transition: transform 1s ease-out ;
+    transition: transform 0.8s ease-out ;
 }
 .toUp.turnUp{
     transform: translateY(0px);
@@ -250,16 +246,31 @@ section{
 
 
 #skill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #A4BC92;
-    padding-top: 5vw;
+}
+
+.skillTitle p{
+    text-align: center;
+    align-self: center;
+    font-size: 6vw;
+    font-family: 'Jakarta Brittany', sans-serif; 
+    font-weight: bolder;
+    line-height: 0;
+    padding: 0;
 }
 
 .skillset{
     display: flex;
     gap: 1rem;
+    width: 70vw;
 }
 .skillset div{
     flex: 1;
+    justify-content: center;
+    align-items: center;
     border-radius: 20px;
     height: 7vw;
     width: 80vw;
@@ -276,7 +287,7 @@ section{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 15vh;
+    margin-top: 5vh;
 }
 .skillExplanation{
     position: relative;
@@ -287,14 +298,24 @@ section{
     width: 70vw;
     height: 21vh;
     font-size: 3vh;
+    margin-bottom: 5vw;
     font-family: 'Two Weekends Sans', sans-serif;
 }
 /* Projects Section */
 #portfolio {
+    display: flex;
     height: 100vh;
-    padding: 2rem;
     background-color: #C7E8CA;
     }
+#portfolio h2{
+    padding: 0;
+    margin: 0;
+}
+#portfolio p{
+    margin-top: 5vw;
+    font-size: 20vw;
+    font-family: 'Jakarta Brittany', sans-serif; 
+}
 /* Contact Section */
 #contact {
     display: flex;
@@ -383,6 +404,8 @@ footer p {
 }
 .footerContainer{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     width: 100%;
     height: fit-content;
