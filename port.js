@@ -16,6 +16,18 @@ function hideNavBarOnFirstSection() {
 
     observer.observe(this.firstSec);
 }
+
+const navBar = document.querySelector('.menu');
+function addInactiveClass() {
+  if (!navBar.classList.contains('inactive')) {
+    navBar.classList.add('inactive');
+  }
+  else{
+    navBar.classList.remove('inactive');
+  }
+}
+
+
 function animateSections() {
   const options = {
     rootMargin: '-50% 0px -50% 0px', // adjust root margin as needed

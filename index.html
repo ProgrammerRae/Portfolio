@@ -19,19 +19,21 @@
     <title>ImChel</title>
 </head>
 <body>
-    <div class="headercontainer">
-        <nav>
+    <!--NavigationBar-->
+        <nav class="headercontainer" >
             <img class="logo" src="https://cdn-icons-png.flaticon.com/512/4749/4749474.png"/>
-            <ul>
-                <li><a href="#home" class=""></a></li>
-                <li><a href="#about" class=""></a></li>
-                <li><a href="#portfolio" class=""></a></li>
-                <li><a href="#skill" class=""></a></li>
-                <li><a href="#contact" class=""></a></li>
+            <ul class="menu inactive" onclick="addInactiveClass()">
+                <li><a href="#home" class="">Home</a></li>
+                <li><a href="#about" class="">About</a></li>
+                <li><a href="#skill" class="">Skill</a></li>
+                <li><a href="#portfolio" class="">Portfolio</a></li>
+                <li><a href="#contact" class="">Contact</a></li>
             </ul>
-            <img class="burgerBtn" src="https://cdn-icons-png.flaticon.com/512/7231/7231133.png"/>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn" onclick="addInactiveClass()">
+                <img class="burgerBtn" src="https://cdn-icons-png.flaticon.com/512/7231/7231133.png"/>
+            </label>
         </nav>
-    </div>
     <div class="sectionContainer" style="overflow-x: hidden; ">
         <!--HOME-->
         <section id="home" class="page-section">

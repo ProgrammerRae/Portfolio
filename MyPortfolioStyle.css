@@ -1,6 +1,4 @@
-*{
-    outline: 1px dotted red;
-}
+
 body {
     font-family: 'Open Sans', sans-serif;
     color: #333;
@@ -19,56 +17,97 @@ ul {
 }
 
 /* Header */
-.headercontainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border: #6d6d6d;
-    position: fixed;
-    height: 9vh;
-    width: 100%;
-    z-index: 999;
-}
+
 .sectionContainer{
     scroll-snap-type: y mandatory; 
     scroll-snap-align: start; 
 }
 nav {
-    position: absolute;
     padding: 1rem;
     display: flex;
-
+    border: #6d6d6d;
+    position: fixed;
+    height: 9vh;
+    width: 100%;
     z-index: 99;
 }
 nav ul{
-    margin: 0;
+    position: fixed;
     list-style: none;
+    right: 0;
+    top: 0;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    justify-content: right;
+    margin: 1vw;
+}
+.checkbtn{
+    display: none;
+}
+@media  screen and (max-width: 768px) {
+    .checkbtn{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        list-style: none;
+        right: 0;
+        top: 0;
+    
+        width: 100%;
+        height: auto;
+
+        background-color: #41644A;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul.inactive{
+        display: none;
+    } 
 }
 nav li {
-    display: inline-block;
-    margin-left: 1vw;
-    margin-right: 1vw;
+    display: block;
+    margin: 1vw;
 }
 nav a {
     display: flex;
-    margin-right: 1vw;
-    color: #eee;
+    color: #41644A;
     font-weight: bold;
     font-size: 1.3rem;
 }
 
 nav a:hover {
-    color: #41644A;
     transform: translateY(-7px);
 }
 .logo{
+    justify-self: left;
     width: 3vw;
     height: 3vw;
+    margin-right: 27vw 
 }
-.burgerBtn{
-    margin-left: 90vw;
-    width: 2vw;
+.checkbtn{
+    justify-self: right;
+    align-self: right;
+    cursor: pointer;
+    margin-left: 1vw;
+}
+.checkbtn img{
     height: 2vw;
+    width: 2vw;
+}
+#check{
+    display: none;
+}
+#check:checked ~ ul{
+    left: 0;
 }
 .socials{
     background-color: none;
@@ -100,7 +139,6 @@ section{
     display: flex;
     background-color: #DDFFBB;
     z-index: 99;
-    outline: 1px solid rgb(2, 54, 8);
 }
 .home1{
     position: relative;
@@ -266,14 +304,16 @@ section{
     display: flex;
     gap: 1rem;
     width: 70vw;
+    margin-top: 1vw;
 }
 .skillset div{
+    position: relative;
     flex: 1;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
     height: 7vw;
-    width: 80vw;
+    width: 20vw;
     background-position: center;
     background-size: 30%;
     background-repeat: no-repeat;
@@ -296,7 +336,7 @@ section{
     flex-wrap: wrap;
     text-align: justify;
     width: 70vw;
-    height: 21vh;
+    height: fit-content;
     font-size: 3vh;
     margin-bottom: 5vw;
     font-family: 'Two Weekends Sans', sans-serif;

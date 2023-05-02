@@ -71,18 +71,39 @@
     color: #537537;
 }
 
+#skill{
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    background-color: #A4BC92;
+    height: 100vh;
+}
+.skillTitle {
+    margin-top: 5vh;
+}
+.skillTitle p{
+    text-align: center;
+    align-self: center;
+    font-size: 15vw;
+    font-family: 'Jakarta Brittany', sans-serif; 
+    font-weight: bolder;
+    line-height: 0;
+    padding: 0;
+}
 .skillset{
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+    width: 100vw;
 }
 .skillset div{
     flex: 1;
     flex-wrap: wrap;
-    border-radius: 20px;
-    height: 50vw;
-    width: 100%;
+    height: 20vw;
+    width: 50vw;
     background-position: center;
-    background-size: 100%;
+    background-size: 10vw;
     background-repeat: no-repeat;
     transition: .3s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -165,6 +186,52 @@
     width: 10vw;
 }
 
+}
+
+@media  screen and (max-width: 768px) {
+    .checkbtn{
+        display: block;
+        margin-left: 44vw;
+    }
+    nav{
+        padding: 3vh;
+    }
+    nav ul{
+        position: fixed;
+        list-style: none;
+        right: 0;
+        top: 0;
+    
+        width: 100%;
+        height: auto;
+
+        background-color: #41644A;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul.inactive{
+        display: none;
+    } 
+    
+    nav a {
+        display: flex;
+        color: #8aae93;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+        
+    .logo{
+        justify-self: left;
+        width: 9vw;
+        height: 9vw;
+    }
+    .checkbtn img{
+        height: 9vw;
+        width: 9vw;
+    }
 }
 
 
