@@ -323,6 +323,7 @@ section{
     display: flex;
     height: 100vh;
     background-color: #C7E8CA;
+    background-image: url("leaves.png");
     }
 #portfolio h2{
     padding: 0;
