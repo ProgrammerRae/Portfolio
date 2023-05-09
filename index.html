@@ -21,7 +21,7 @@
 <body>
     <!--NavigationBar-->
         <nav class="headercontainer" >
-            <img class="logo" src="https://cdn-icons-png.flaticon.com/512/4749/4749474.png"/>
+            <img class="logoDisplay" title="pageLogo" src="https://cdn-icons-png.flaticon.com/512/4749/4749474.png"/>
             <ul class="menu inactive" onclick="addInactiveClass()">
                 <li><a href="#home" class="">Home</a></li>
                 <li><a href="#about" class="">About</a></li>
@@ -29,9 +29,9 @@
                 <li><a href="#portfolio" class="">Portfolio</a></li>
                 <li><a href="#contact" class="">Contact</a></li>
             </ul>
-            <input type="checkbox" id="check">
+            <input type="checkbox" id="check" placeholder="">
             <label for="check" class="checkbtn" onclick="addInactiveClass()">
-                <img class="burgerBtn" src="https://cdn-icons-png.flaticon.com/512/7231/7231133.png"/>
+                <img class="burgerBtn" src="https://cdn-icons-png.flaticon.com/512/7231/7231133.png" title="mainmenu"/>
             </label>
         </nav>
     <div class="sectionContainer" style="overflow-x: hidden; ">
@@ -40,7 +40,7 @@
             <div class="home1">
                 <p id="developer" class="me" >Hi, I'm Raechel Rola</p>
                 <p class="greet">Entry-Level Developer.</p>
-                <p><img id="planebtn" src="https://cdn-icons-png.flaticon.com/512/1566/1566164.png"/></p>
+                <p><img id="planebtn" src="https://cdn-icons-png.flaticon.com/512/1566/1566164.png" title="aboutBTN"/></p>
             </div>
         </section>
         <!--ABOUT-->
@@ -60,19 +60,19 @@
                 </div>
         </section>
         <section id="skill">
-            <div class="skillTitle toUp">
+            <div class="skillTitle toFade">
                 <p>
                     Skills
                 </p>
             </div>
-            <div class="ExpContainer toUp">
+            <div class="ExpContainer toFade">
                 <div class="div2">
                     <p class="skillExplanation">
                         I am actively seeking a position as a web developer, and I would like to offer my expertise in several programming languages and tools that could add significant value to your organization. Alongside my strong foundational knowledge in JS, CSS, and HTML, I am also proficient in Java, XML, and C#. <br>In addition to my programming skills, I possess an eye for design and am skilled in utilizing design tools to create visually appealing and functional interfaces. Specifically, I am experienced in using Figma to design UIs for mobile apps, which has proven to be an effective tool for creating user-friendly and aesthetically pleasing designs. 
                     </p>
                 </div>
             </div>
-            <div class="skillset toUp">
+            <div class="skillset toFade">
                 <div class="skill1" style="background-image: url('https://cdn-icons-png.flaticon.com/512/152/152760.png');">
                 </div>
                 <div class="skill2" style="background-image: url('https://cdn-icons-png.flaticon.com/512/460/460670.png');">
@@ -124,9 +124,9 @@
         <div class="footerContainer">
         <div class="socials">
             <ul>
-                <li><a href="https://www.linkedin.com/in/raechel-marie-rola-57a7b5231/"><img class="linkedin" src="https://cdn-icons-png.flaticon.com/512/3488/3488326.png"/></a></li>
-                <li><a href="https://github.com/ProgrammerRae"><img class="github" src="https://cdn-icons-png.flaticon.com/512/3488/3488426.png"/></a></li>
-                <li><a href="#"><img class="instagram" src="https://cdn-icons-png.flaticon.com/512/4406/4406253.png"/></a></li>
+                <li><a href="https://www.linkedin.com/in/raechel-marie-rola-57a7b5231/"><img class="linkedin" title="linkedinbtn" src="https://cdn-icons-png.flaticon.com/512/3488/3488326.png"/></a></li>
+                <li><a href="https://github.com/ProgrammerRae"><img class="github" title="gitBtn" src="https://cdn-icons-png.flaticon.com/512/3488/3488426.png"/></a></li>
+                <li><a href="#"><img class="instagram" title="igBtn" src="https://cdn-icons-png.flaticon.com/512/4406/4406253.png"/></a></li>
             </ul>
         </div>
         <p>&copy; 2023 Raechel Rola. All rights reserved.</p>

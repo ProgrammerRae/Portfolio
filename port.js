@@ -37,7 +37,7 @@ function animateSections() {
 
   const boxes = document.querySelectorAll('.toright');
   const boxes1 = document.querySelectorAll('.toleft');
-  const boxes3 = document.querySelectorAll('.toUp');
+  const boxes3 = document.querySelectorAll('.toFade');
 
   const collCards = [...boxes, ...boxes1]; // Merge NodeList objects into one array
 
@@ -55,9 +55,9 @@ function animateSections() {
       if (entry.target === secSection) {
         boxes3.forEach((box) => {
           if (entry.isIntersecting) {
-            box.classList.remove('turnUp');
+            box.classList.remove('turnFade');
           } else {
-            box.classList.add('turnUp');
+            box.classList.add('turnFade');
           }
         });
       }

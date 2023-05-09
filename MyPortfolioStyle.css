@@ -49,30 +49,6 @@ nav ul{
 .checkbtn{
     display: none;
 }
-@media  screen and (max-width: 768px) {
-    .checkbtn{
-        display: block;
-    }
-    nav ul{
-        position: fixed;
-        list-style: none;
-        right: 0;
-        top: 0;
-    
-        width: 100%;
-        height: auto;
-
-        background-color: #41644A;
-    
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    nav ul.inactive{
-        display: none;
-    } 
-}
 nav li {
     display: block;
     margin: 1vw;
@@ -87,7 +63,7 @@ nav a {
 nav a:hover {
     transform: translateY(-7px);
 }
-.logo{
+.logoDisplay{
     justify-self: left;
     width: 3vw;
     height: 3vw;
@@ -111,7 +87,7 @@ nav a:hover {
 }
 .socials{
     background-color: none;
-    width: fit-content;
+    width: 10vw;
 }
 
 .socials ul{
@@ -145,7 +121,7 @@ section{
     flex-direction: column;
     display: flex;
     width: fit-content;
-    height: fit-content;
+    height: 50vh;
     animation: animate 3s alternate infinite;
 }
 #home .me{
@@ -270,13 +246,11 @@ section{
 
 
 /*for skills*/
-.toUp{
-    transform: translateY(550px);
+.toFade{
     opacity: 0;
-    transition: transform 0.8s ease-out ;
+    transition: opacity 0.8s ease-in-out ;
 }
-.toUp.turnUp{
-    transform: translateY(0px);
+.toFade.turnFade{
     opacity: 100;
 }
 
@@ -295,7 +269,7 @@ section{
     align-self: center;
     font-size: 6vw;
     font-family: 'Jakarta Brittany', sans-serif; 
-    font-weight: bolder;
+    font-weight: bold;
     line-height: 0;
     padding: 0;
 }

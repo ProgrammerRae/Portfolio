@@ -180,7 +180,9 @@
     justify-content: center;
     align-items: center; 
 }
-
+.socials{
+    width: 40vw;
+}
 .socials img{
     height: 10vw;
     width: 10vw;
@@ -223,7 +225,7 @@
         font-size: 1.3rem;
     }
         
-    .logo{
+    .logoDisplay{
         justify-self: left;
         width: 9vw;
         height: 9vw;
