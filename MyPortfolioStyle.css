@@ -179,13 +179,15 @@ section{
     margin: none;
     z-index: 99;
     justify-content: center;
+    background-image: url("bago.png");
 }
 #about .meh{
     justify-self: right;
     text-align: center;
     line-height: -5vh;
     align-self: center;
-    padding: 5vw
+    padding: 5vw;
+    margin-bottom: 0;
 }
 
 #about .meh h1{
@@ -216,9 +218,10 @@ section{
     height: 21vh; 
 }
 #about p {
-    font-family: 'Two Weekends Sans', sans-serif;                          
+    font-family: 'Mali', sans-serif;                
+    font-weight: bold;  
     font-size: 1.5rem;
-    color: #537537;;
+    color: #A4BC92;
 }
 
 
