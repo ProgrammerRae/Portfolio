@@ -196,23 +196,28 @@
         margin-left: 44vw;
     }
     nav{
-        padding: 3vh;
+        padding: 1vh;
     }
     nav ul{
         position: fixed;
+        margin-top: 10vh;
         list-style: none;
         right: 0;
         top: 0;
     
         width: 100%;
-        height: auto;
+        height: 50vh;
 
         background-color: #41644A;
-    
+        backdrop-filter: blur(100px);
+
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    nav li{
+        margin-top: 3vh;
     }
     nav ul.inactive{
         display: none;
@@ -222,17 +227,20 @@
         display: flex;
         color: #8aae93;
         font-weight: bold;
-        font-size: 1.3rem;
+        font-size:2rem;
     }
         
     .logoDisplay{
         justify-self: left;
         width: 9vw;
         height: 9vw;
+        margin: 2vw;
     }
     .checkbtn img{
         height: 9vw;
         width: 9vw;
+        margin-top: 0.5vh;
+        margin-left: 28vw;
     }
 }
 
