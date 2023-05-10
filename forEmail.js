@@ -1,32 +1,44 @@
 // Load the Gmail API client library
-const {google} = require('googleapis');
-const gmail = google.gmail('v1');
+gapi.load('client:auth2', initClient);
 
-// Authenticate and authorize your application
-// (You will need to replace the placeholders with your own values)
-const credentials = require('./path/to/credentials.json');
-const auth = new google.auth.GoogleAuth({
-  credentials: credentials,
-  scopes: ['https://www.googleapis.com/auth/gmail.send']
-});
-const client = await auth.getClient();
+// Initialize the API client with the credentials
+function initClient() {
+  gapi.client.init({
+    apiKey: 'YOUR_API_KEY',
+    clientId: 'YOUR_CLIENT_ID',
+    discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest'],
+    scope: 'https://www.googleapis.com/auth/gmail.send'
+  }).then(function () {
+    // Call the Gmail API to send a message
+    sendMessage('recipient@example.com', 'Subject', 'Body');
+  });
+}
 
-// Create an email message
-const message = "To: recipient@example.com\r\n" +
-                "Subject: Test email from Gmail API\r\n" +
-                "\r\n" +
-                "This is a test email sent using the Gmail API.";
+// Send a message using the Gmail API
+function sendMessage(to, subject, message) {
+  var raw = makeEmail(to, 'me', subject, message);
+  var request = gapi.client.gmail.users.messages.send({
+    'userId': 'me',
+    'resource': {
+      'raw': window.btoa(raw)
+    }
+  });
+  request.execute(function (message) {
+    console.log('Message Id: ' + message.id);
+  });
+}
 
-// Convert the email message to base64 URL-encoded string
-const encodedMessage = Buffer.from(message).toString('base64').replace(/\+/g, '-').replace(/\//g, '_');
-
-// Send the email
-const res = await gmail.users.messages.send({
-  auth: client,
-  userId: 'me',
-  resource: {
-    raw: encodedMessage
-  }
-});
-
-console.log('Email sent:', res.data);
+// Create a message in the required format for the Gmail API
+function makeEmail(to, from, subject, message) {
+  var headers = [
+    "To: " + to,
+    "From: " + from,
+    "Subject: " + subject
+  ];
+  var body = message.split("\n").map(function (line) {
+    return " " + line;
+  }).join("\n");
+  var email = headers.join("\n") + "\n\n" + body;
+  var base64EncodedEmail = btoa(email);
+  return base64EncodedEmail;
+}
