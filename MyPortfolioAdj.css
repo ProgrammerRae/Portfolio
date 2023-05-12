@@ -22,7 +22,57 @@
     transform: translateY(-50px)
 }
 }
+.checkbtn{
+    display: block;
+    margin-left: 44vw;
+}
+nav{
+    padding: 1vh;
+}
+nav ul{
+    position: fixed;
+    margin-top: 10vh;
+    list-style: none;
+    right: 0;
+    top: 0;
 
+    width: 100%;
+    height: 50vh;
+
+    background-color: #41644A;
+    backdrop-filter: blur(100px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+nav li{
+    margin-top: 3vh;
+}
+nav ul.inactive{
+    display: none;
+} 
+
+nav a {
+    display: flex;
+    color: #8aae93;
+    font-weight: bold;
+    font-size:2rem;
+}
+    
+.logoDisplay{
+    justify-self: left;
+    width: 9vw;
+    height: 9vw;
+    margin: 2vw;
+}
+.checkbtn img{
+    height: 9vw;
+    width: 9vw;
+    margin-top: 0.5vh;
+    margin-left: 28vw;
+}
 #home .me:hover{
     color: #41644A ;
 }
@@ -188,60 +238,34 @@
     width: 10vw;
 }
 
+#portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: fit-content;
+    background-color: #C7E8CA;
+    background-image: url("leaves.png");
+}
+.container1{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
 }
 
-@media  screen and (max-width: 768px) {
-    .checkbtn{
-        display: block;
-        margin-left: 44vw;
-    }
-    nav{
-        padding: 1vh;
-    }
-    nav ul{
-        position: fixed;
-        margin-top: 10vh;
-        list-style: none;
-        right: 0;
-        top: 0;
-    
-        width: 100%;
-        height: 50vh;
+.portfolioContainer{
+    position: relative;
+    padding: 20px;
+    height: 20vh;
+    width: 70vw;
+    border: solid #537537;
+    border-radius: 25px;
+    margin-bottom: 2vw;
+    margin-left: 1vw;
+}
+.portfolio-image img{
+    height: 20vh;
+    width: 68vw;
+}
 
-        background-color: #41644A;
-        backdrop-filter: blur(100px);
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    nav li{
-        margin-top: 3vh;
-    }
-    nav ul.inactive{
-        display: none;
-    } 
-    
-    nav a {
-        display: flex;
-        color: #8aae93;
-        font-weight: bold;
-        font-size:2rem;
-    }
-        
-    .logoDisplay{
-        justify-self: left;
-        width: 9vw;
-        height: 9vw;
-        margin: 2vw;
-    }
-    .checkbtn img{
-        height: 9vw;
-        width: 9vw;
-        margin-top: 0.5vh;
-        margin-left: 28vw;
-    }
 }
 
 

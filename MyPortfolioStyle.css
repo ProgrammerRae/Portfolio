@@ -321,18 +321,49 @@ section{
 /* Projects Section */
 #portfolio {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     background-color: #C7E8CA;
     background-image: url("leaves.png");
-    }
-#portfolio h2{
-    padding: 0;
-    margin: 0;
 }
-#portfolio p{
-    margin-top: 5vw;
-    font-size: 20vw;
-    font-family: 'Jakarta Brittany', sans-serif; 
+.container1{
+    line-height: 0;
+    margin-bottom: 3vh;
+}
+.container1 h2{
+    font-size: 3vh;
+}
+.bigContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+.portDesc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    margin-bottom: 2vh;
+}
+.portDesc p{
+    font-size: 3vh;
+    justify-self: center;
+}
+.portfolioContainer{
+    position: relative;
+    padding: 20px;
+    height: 20vh;
+    width: 25vw;
+    border: solid #537537;
+    border-radius: 25px;
+    margin-bottom: 2vw;
+    margin-left: 1vw;
+}
+.portfolio-image img{
+    height: 20vh;
+    width: 20vw;
 }
 
 /* Footer */
