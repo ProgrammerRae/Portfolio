@@ -331,7 +331,8 @@ section{
     margin-bottom: 3vh;
 }
 .container1 h2{
-    font-size: 3vh;
+    font-size: 8vh;
+    font-family: 'Jakarta Brittany', sans-serif; 
 }
 .bigContainer{
     display: flex;
@@ -350,6 +351,7 @@ section{
 .portDesc p{
     font-size: 3vh;
     justify-self: center;
+    
 }
 .portfolioContainer{
     position: relative;
@@ -360,6 +362,7 @@ section{
     border-radius: 25px;
     margin-bottom: 2vw;
     margin-left: 1vw;
+    backdrop-filter: blur(5px);
 }
 .portfolio-image img{
     height: 20vh;
