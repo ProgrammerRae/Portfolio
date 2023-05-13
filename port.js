@@ -92,3 +92,9 @@ scrolltoAbout.addEventListener('click', ()=>{
   // Scroll to the target section using smooth scrolling behavior
   targetSection.scrollIntoView({ behavior: 'smooth' });
 });
+
+window.addEventListener("scroll", ()=> {
+  if (window.location.hash) {
+    history.replaceState(null, null, " ");
+  }
+});

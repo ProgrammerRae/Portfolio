@@ -37,9 +37,7 @@ nav ul{
     top: 0;
 
     width: 100%;
-    height: 50vh;
-
-    background-color: #41644A;
+    height: 100vh;
     backdrop-filter: blur(100px);
 
     display: flex;
@@ -56,7 +54,7 @@ nav ul.inactive{
 
 nav a {
     display: flex;
-    color: #8aae93;
+    color: #0e110f;
     font-weight: bold;
     font-size:2rem;
 }
@@ -71,6 +69,7 @@ nav a {
     height: 9vw;
     width: 9vw;
     margin-top: 0.5vh;
+    padding: 0;
     margin-left: 28vw;
 }
 #home .me:hover{
@@ -264,6 +263,13 @@ nav a {
 .portfolio-image img{
     height: 20vh;
     width: 68vw;
+}
+.portDesc{
+    width: 70vw;
+}
+.portDesc p{
+    font-size: 2vh;
+    text-align: justify;
 }
 
 }
