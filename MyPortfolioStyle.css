@@ -350,8 +350,7 @@ section{
 }
 .portDesc p{
     font-size: 3vh;
-    justify-self: center;
-    
+    text-align: justify;
 }
 .portfolioContainer{
     position: relative;

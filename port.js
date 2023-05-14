@@ -93,8 +93,18 @@ scrolltoAbout.addEventListener('click', ()=>{
   targetSection.scrollIntoView({ behavior: 'smooth' });
 });
 
-window.addEventListener("scroll", ()=> {
-  if (window.location.hash) {
-    history.replaceState(null, null, " ");
+const nav = document.querySelector('.menu');
+let isNavOpen = false;
+
+window.addEventListener('scroll', () => {
+  if (isNavOpen) {
+    nav.classList.add('inactive');
+    isNavOpen = false;
   }
+});
+
+
+nav.addEventListener('click', () => {
+  nav.classList.toggle('inactive');
+  isNavOpen = !isNavOpen;
 });
